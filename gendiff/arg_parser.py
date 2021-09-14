@@ -1,16 +1,11 @@
-"""Func parse args """
-import argparse
+"""Main script."""
+from gendiff.scripts.gendiff import parse
 
 
-def parse():
-    """Func parse and return args."""
-    parser = argparse.ArgumentParser(description='Generate diff')
-    parser.add_argument('first_file', type=str)
-    parser.add_argument('second_file', type=str)
-    parser.add_argument(
-        '-f',
-        '--format',
-        help='set format of output'
-        default='stylish',
-    )
-    return parser.parse_args()
+def main():
+    """Start main script."""
+    parse()
+
+
+if __name__ == '__main__':
+    main()
